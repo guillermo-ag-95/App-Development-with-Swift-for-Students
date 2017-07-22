@@ -1,0 +1,10 @@
+framework module LabFramework {
+  umbrella header "LabFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module LabFramework.Swift {
+    header "LabFramework-Swift.h"
+}
