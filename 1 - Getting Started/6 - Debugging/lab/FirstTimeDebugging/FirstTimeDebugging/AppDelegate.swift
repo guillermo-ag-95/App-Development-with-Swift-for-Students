@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         var testArray: [String] = ["Uh oh..."]
         testArray.removeFirst()
-        testArray.removeFirst()
         return true
     }
 
