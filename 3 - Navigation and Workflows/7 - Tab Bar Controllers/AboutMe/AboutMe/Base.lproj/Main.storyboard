@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="way-L1-lns">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bio-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bgq-1z-xNf">
+                                <rect key="frame" x="16" y="20" width="288" height="499"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Foto Perfil" translatesAutoresizingMaskIntoConstraints="NO" id="bME-0r-jDQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="249.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm Guillermo, 21 years old, and I am studying an undergraduate program about Software Engineering." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUT-op-lJ5">
+                                        <rect key="frame" x="0.0" y="249.5" width="288" height="249.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bgq-1z-xNf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1aq-9l-adT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bgq-1z-xNf" secondAttribute="bottom" id="7Ng-CY-7nE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bgq-1z-xNf" secondAttribute="trailing" id="UNb-PK-dJ3"/>
+                            <constraint firstItem="Bgq-1z-xNf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gak-KH-eFY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bio" id="4Tg-lf-Ryz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.375" y="999.29577464788736"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="at3-zv-8X2">
+            <objects>
+                <viewController id="aLV-sw-6FU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Elb-rV-WCa"/>
+                        <viewControllerLayoutGuide type="bottom" id="J9F-h8-e9v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0sP-6E-hzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IIN-ft-C9S">
+                                <rect key="frame" x="16" y="20" width="288" height="499"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sevilla" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-sf-DPS">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="249.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPi-YC-pJT">
+                                        <rect key="frame" x="0.0" y="249.5" width="288" height="249.5"/>
+                                        <string key="text">I live with my family in Seville and every year we travel to a different country during summer vacations. This year we are going to Russia.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J9F-h8-e9v" firstAttribute="top" secondItem="IIN-ft-C9S" secondAttribute="bottom" id="DBF-Iy-OpF"/>
+                            <constraint firstItem="IIN-ft-C9S" firstAttribute="leading" secondItem="0sP-6E-hzJ" secondAttribute="leadingMargin" id="Nva-EU-6wO"/>
+                            <constraint firstItem="IIN-ft-C9S" firstAttribute="top" secondItem="Elb-rV-WCa" secondAttribute="bottom" id="OHm-Gp-cBj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IIN-ft-C9S" secondAttribute="trailing" id="w0n-Ds-zfE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Family" id="j8Z-Bg-lIA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBn-5m-hWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="1001"/>
+        </scene>
+        <!--Hobbies-->
+        <scene sceneID="bEX-kI-gWd">
+            <objects>
+                <viewController id="u37-6g-Wgi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZUX-Kh-QZE"/>
+                        <viewControllerLayoutGuide type="bottom" id="7b9-La-XWh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qfo-e6-pVs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5e8-9J-P7L">
+                                <rect key="frame" x="16" y="20" width="288" height="499"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Deadlift" translatesAutoresizingMaskIntoConstraints="NO" id="eIa-ni-ETt">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="249.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az1-Y3-5WM">
+                                        <rect key="frame" x="0.0" y="249.5" width="288" height="249.5"/>
+                                        <string key="text">My favorite hobby is lifting weight. I'm interested in Powerlifting and Weightlifting and I would like to compite in a near future.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5e8-9J-P7L" secondAttribute="trailing" id="7em-dh-kvV"/>
+                            <constraint firstItem="5e8-9J-P7L" firstAttribute="leading" secondItem="qfo-e6-pVs" secondAttribute="leadingMargin" id="VsW-Ow-EfN"/>
+                            <constraint firstItem="7b9-La-XWh" firstAttribute="top" secondItem="5e8-9J-P7L" secondAttribute="bottom" id="dWM-e4-3iH"/>
+                            <constraint firstItem="5e8-9J-P7L" firstAttribute="top" secondItem="ZUX-Kh-QZE" secondAttribute="bottom" id="gHK-cD-FWA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hobbies" id="Jj3-aR-XVn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QF4-24-HGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923" y="1000"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qU9-bl-aQy">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="way-L1-lns" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="20P-ah-3AD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Sqx-es-KiD"/>
+                        <segue destination="aLV-sw-6FU" kind="relationship" relationship="viewControllers" id="shR-PT-NJs"/>
+                        <segue destination="u37-6g-Wgi" kind="relationship" relationship="viewControllers" id="Kyl-K7-sVY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ux5-wT-D5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Deadlift" width="640" height="640"/>
+        <image name="Foto Perfil" width="3000" height="3000"/>
+        <image name="Sevilla" width="2000" height="1333"/>
+    </resources>
+</document>
