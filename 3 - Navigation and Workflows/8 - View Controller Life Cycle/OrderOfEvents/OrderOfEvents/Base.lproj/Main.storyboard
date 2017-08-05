@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="t0d-xy-UkY">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OrderOfEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9l-f8-hag">
+                                <rect key="frame" x="83" y="269" width="154" height="30"/>
+                                <state key="normal" title="Show me the life cycle"/>
+                                <connections>
+                                    <segue destination="C6m-un-txH" kind="show" id="4pD-wT-wra"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w9l-f8-hag" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MMD-4x-gfv"/>
+                            <constraint firstItem="w9l-f8-hag" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kMY-Ab-0wM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wWA-9C-Pso"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.5" y="136.26760563380282"/>
+        </scene>
+        <!--Middle View Controller-->
+        <scene sceneID="s4r-un-sPn">
+            <objects>
+                <viewController id="C6m-un-txH" customClass="MiddleViewController" customModule="OrderOfEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ziv-Da-dlg"/>
+                        <viewControllerLayoutGuide type="bottom" id="WBc-zc-E1k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6fo-Ou-wIF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2d-yp-OUv">
+                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Clf-e4-QkH" kind="show" id="4lu-0y-okL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing has happened yet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-L3-J30">
+                                <rect key="frame" x="59" y="72" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mdf-L3-J30" firstAttribute="top" secondItem="ziv-Da-dlg" secondAttribute="bottom" constant="8" id="10f-7P-jMd"/>
+                            <constraint firstItem="A2d-yp-OUv" firstAttribute="centerX" secondItem="6fo-Ou-wIF" secondAttribute="centerX" id="APg-3K-pQ9"/>
+                            <constraint firstItem="WBc-zc-E1k" firstAttribute="top" secondItem="A2d-yp-OUv" secondAttribute="bottom" constant="20" id="KDP-M5-mhV"/>
+                            <constraint firstItem="Mdf-L3-J30" firstAttribute="centerX" secondItem="6fo-Ou-wIF" secondAttribute="centerX" id="oPq-PI-Ikx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lifeCycleLabel" destination="Mdf-L3-J30" id="LeO-Yv-mCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vX0-Zd-zpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="136"/>
+        </scene>
+        <!--Last View Controller-->
+        <scene sceneID="4xi-za-vlT">
+            <objects>
+                <viewController id="Clf-e4-QkH" customClass="LastViewController" customModule="OrderOfEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edp-7I-Sav"/>
+                        <viewControllerLayoutGuide type="bottom" id="R0U-wn-JV1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3nv-kK-F25">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go back and see if anything happened" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJA-d8-Eiu">
+                                <rect key="frame" x="13.5" y="72" width="293.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AJA-d8-Eiu" firstAttribute="centerX" secondItem="3nv-kK-F25" secondAttribute="centerX" id="7Jj-Wh-oZu"/>
+                            <constraint firstItem="AJA-d8-Eiu" firstAttribute="top" secondItem="edp-7I-Sav" secondAttribute="bottom" constant="8" id="Vvw-s1-Ujx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrl-aQ-qdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rfB-LD-zgz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t0d-xy-UkY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HTe-O6-ulo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VDs-yP-TIA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeJ-8Z-Lvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="136.26760563380282"/>
+        </scene>
+    </scenes>
+</document>
