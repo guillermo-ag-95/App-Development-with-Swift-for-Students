@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 class AthleteTableViewController: UITableViewController {
     
@@ -9,7 +10,6 @@ class AthleteTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
-
 
     // MARK: - Table view data source
 
@@ -27,13 +27,22 @@ class AthleteTableViewController: UITableViewController {
         return cell
     }
 
-
-    /*
-    // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        let athleteFormViewController = segue.destination as! AthleteFormViewController
+        if let indexPath = tableView.indexPathForSelectedRow,
+            segue.identifier == PropertyKeys.editAthleteSegue {
+            athleteFormViewController.athlete = athletes[indexPath.row]
+        }
     }
- */
-
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        let athleteFormViewController = segue.destination as! AthleteFormViewController
+        guard let athlete = athleteFormViewController.athlete else { return }
+        if let indexPath = tableView.indexPathForSelectedRow {
+            athletes.remove(at: indexPath.row)
+            athletes.insert(athlete, at: indexPath.row)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
 }
