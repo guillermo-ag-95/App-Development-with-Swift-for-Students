@@ -109,7 +109,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DH-j1-SLF">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DH-j1-SLF" userLabel="Athlete Age Text Field">
                                         <rect key="frame" x="0.0" y="40" width="283" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -134,8 +134,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveAthlete:" destination="8K9-2q-IXD" eventType="touchUpInside" id="FSV-3O-thU"/>
-                                    <action selector="saveButtonTapped:" destination="8K9-2q-IXD" eventType="touchUpInside" id="hY9-aI-8LA"/>
-                                    <segue destination="wFc-3q-vwq" kind="unwind" identifier="saveAthlete" unwindAction="unwindSegueWithSegue:" id="T3M-3E-WZD"/>
+                                    <segue destination="wFc-3q-vwq" kind="unwind" identifier="saveAthlete" unwindAction="unwindSegueWithSegue:" id="Msg-XN-tZr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,14 +151,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="V1y-YK-nLQ"/>
                     <connections>
-                        <outlet property="ageTextField" destination="6DH-j1-SLF" id="6Y9-re-8DD"/>
                         <outlet property="athleteAgeTextField" destination="6DH-j1-SLF" id="NXM-5l-I2V"/>
                         <outlet property="athleteLeagueTextField" destination="Aap-hH-FNd" id="nqs-2k-heC"/>
                         <outlet property="athleteNameTextField" destination="U3J-R0-1jS" id="WjZ-7Y-gdu"/>
                         <outlet property="athleteTeamTextField" destination="rKE-v9-NBr" id="oos-xE-5Rw"/>
-                        <outlet property="leagueTextField" destination="Aap-hH-FNd" id="NAj-bV-GJQ"/>
-                        <outlet property="nameTextField" destination="U3J-R0-1jS" id="WV2-Wc-aLC"/>
-                        <outlet property="teamTextField" destination="rKE-v9-NBr" id="MJO-gY-cwo"/>
                         <segue destination="wFc-3q-vwq" kind="unwind" identifier="unwindToAthleteTable" unwindAction="prepareForUnwindWithSegue:" id="HPS-Df-mzT"/>
                     </connections>
                 </viewController>

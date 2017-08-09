@@ -18,7 +18,7 @@ class AthleteTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.athleteCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AthleteCell", for: indexPath)
         
         let athlete = athletes[indexPath.row]
         cell.textLabel?.text = athlete.name
@@ -30,18 +30,20 @@ class AthleteTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let athleteFormViewController = segue.destination as! AthleteFormViewController
         if let indexPath = tableView.indexPathForSelectedRow,
-            segue.identifier == PropertyKeys.editAthleteSegue {
+            segue.identifier == "EditAthlete" {
             athleteFormViewController.athlete = athletes[indexPath.row]
         }
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        let athleteFormViewController = segue.destination as! AthleteFormViewController
+        let athleteFormViewController = segue.source as! AthleteFormViewController
         guard let athlete = athleteFormViewController.athlete else { return }
         if let indexPath = tableView.indexPathForSelectedRow {
             athletes.remove(at: indexPath.row)
-            athletes.insert(athlete, at: indexPath.row)
+            // athletes.insert(athlete, at: indexPath.row)
             tableView.deselectRow(at: indexPath, animated: true)
+        } else {
+            athletes.append(athlete)
         }
     }
     
