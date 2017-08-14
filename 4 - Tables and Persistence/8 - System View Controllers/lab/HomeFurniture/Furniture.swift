@@ -2,9 +2,9 @@
 import Foundation
 
 class Furniture {
-    let name: String
-    let description: String
-    let imageData: Data?
+    var name: String
+    var description: String
+    var imageData: Data?
     
     init(name: String, description: String, imageData: Data? = nil) {
         self.name = name
