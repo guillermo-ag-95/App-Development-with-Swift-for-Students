@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Change color animation'/>
+        <page name='Move from corner to corner animation'/>
+        <page name='Transform property'/>
+        <page name='Transform property 2'/>
+    </pages>
+</playground>

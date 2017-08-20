@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicWireframe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FW-AK-9yn">
+                                <rect key="frame" x="24" y="348" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Aq-SQ-UFu">
+                                <rect key="frame" x="130" y="348" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-BJ-Zos">
+                                <rect key="frame" x="236" y="348" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-A6-u8P">
+                                <rect key="frame" x="16" y="20" width="288" height="288"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q7f-A6-u8P" secondAttribute="height" multiplier="1:1" id="Ft0-zm-jXX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6SA-Du-qb2">
+                                <rect key="frame" x="24" y="348" width="272" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcD-5W-YaG">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <state key="normal" image="reverse"/>
+                                        <connections>
+                                            <action selector="touchedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="BSz-a4-2Sp"/>
+                                            <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STD-Ca-1vd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hej-7l-fi2">
+                                        <rect key="frame" x="106" y="0.0" width="60" height="60"/>
+                                        <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKd-zy-Ked"/>
+                                            <action selector="touchedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="mVb-LI-hgu"/>
+                                            <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wp7-2I-JIe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49a-7C-aG1">
+                                        <rect key="frame" x="212" y="0.0" width="60" height="60"/>
+                                        <state key="normal" image="forward"/>
+                                        <connections>
+                                            <action selector="touchedDown:" destination="BYZ-38-t0r" eventType="touchDown" id="kBO-6a-Epo"/>
+                                            <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fsi-s2-s3O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Aq-SQ-UFu" firstAttribute="height" secondItem="Hej-7l-fi2" secondAttribute="height" id="1fS-Fj-FhX"/>
+                            <constraint firstItem="4Aq-SQ-UFu" firstAttribute="width" secondItem="Hej-7l-fi2" secondAttribute="width" id="1ht-bo-QYM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6SA-Du-qb2" secondAttribute="bottom" constant="20" id="FcB-hE-v8U"/>
+                            <constraint firstItem="6SA-Du-qb2" firstAttribute="top" secondItem="Q7f-A6-u8P" secondAttribute="bottom" constant="40" id="GvP-nx-BFj"/>
+                            <constraint firstItem="Q7f-A6-u8P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JnX-b9-4ke"/>
+                            <constraint firstItem="7FW-AK-9yn" firstAttribute="centerY" secondItem="OcD-5W-YaG" secondAttribute="centerY" id="Mq6-9P-ozw"/>
+                            <constraint firstItem="7FW-AK-9yn" firstAttribute="width" secondItem="OcD-5W-YaG" secondAttribute="width" id="Rif-kA-bbs"/>
+                            <constraint firstItem="58Z-BJ-Zos" firstAttribute="centerX" secondItem="49a-7C-aG1" secondAttribute="centerX" id="Z1W-Rw-TEW"/>
+                            <constraint firstItem="Q7f-A6-u8P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZhG-vk-5z0"/>
+                            <constraint firstItem="58Z-BJ-Zos" firstAttribute="centerY" secondItem="49a-7C-aG1" secondAttribute="centerY" id="amg-nc-tig"/>
+                            <constraint firstItem="7FW-AK-9yn" firstAttribute="centerX" secondItem="OcD-5W-YaG" secondAttribute="centerX" id="elk-Va-Ndo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6SA-Du-qb2" secondAttribute="trailing" constant="8" id="htu-Is-ARp"/>
+                            <constraint firstItem="4Aq-SQ-UFu" firstAttribute="centerX" secondItem="Hej-7l-fi2" secondAttribute="centerX" id="j5w-tr-0LL"/>
+                            <constraint firstItem="58Z-BJ-Zos" firstAttribute="height" secondItem="49a-7C-aG1" secondAttribute="height" id="j7o-MN-6lX"/>
+                            <constraint firstItem="4Aq-SQ-UFu" firstAttribute="centerY" secondItem="Hej-7l-fi2" secondAttribute="centerY" id="mTM-AD-hi4"/>
+                            <constraint firstItem="6SA-Du-qb2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="nOs-Tb-4SG"/>
+                            <constraint firstItem="7FW-AK-9yn" firstAttribute="height" secondItem="OcD-5W-YaG" secondAttribute="height" id="oyp-Tj-3zb"/>
+                            <constraint firstItem="58Z-BJ-Zos" firstAttribute="width" secondItem="49a-7C-aG1" secondAttribute="width" id="usb-KS-pM9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q7f-A6-u8P" secondAttribute="trailing" id="y9C-Ib-nro"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="Q7f-A6-u8P" id="Cru-hz-kab"/>
+                        <outlet property="forwardBackground" destination="58Z-BJ-Zos" id="M3i-o4-dNk"/>
+                        <outlet property="forwardButton" destination="49a-7C-aG1" id="X09-I2-1b7"/>
+                        <outlet property="playPauseBackground" destination="4Aq-SQ-UFu" id="vb2-Io-KiE"/>
+                        <outlet property="playPauseButton" destination="Hej-7l-fi2" id="JR9-jM-N5H"/>
+                        <outlet property="reverseBackground" destination="7FW-AK-9yn" id="sTt-J7-zdd"/>
+                        <outlet property="reverseButton" destination="OcD-5W-YaG" id="gms-QP-QXz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.75" y="34.859154929577464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="forward" width="60" height="60"/>
+        <image name="pause" width="60" height="60"/>
+        <image name="reverse" width="60" height="60"/>
+    </resources>
+</document>
