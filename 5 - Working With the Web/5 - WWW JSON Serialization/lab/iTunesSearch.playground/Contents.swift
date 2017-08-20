@@ -4,6 +4,37 @@ import PlaygroundSupport
 // Part One: HTTP, URLs, and URL Session
 
 PlaygroundPage.current.needsIndefiniteExecution = true
+URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
+
+struct PropertyKeys {
+    static let name = "trackName"
+    static let description = "shortDescription"
+    static let kind = "kind"
+    static let sdPrice = "trackPrice"
+    static let hdPrice = "trackHdPrice"
+}
+
+struct StoreItem {
+    var name: String // trackName
+    var description: String // description
+    var kind: String // kind
+    var sdPrice: Double? // trackPrice
+    var hdPrice: Double? // trackHdPrice
+    
+    init?(json: [String: Any]) {
+        guard
+            let name = json[PropertyKeys.name] as? String,
+            let description = json[PropertyKeys.description] as? String,
+            let kind = json[PropertyKeys.kind] as? String
+        else { return nil }
+    
+        self.name = name
+        self.description = description
+        self.kind = kind
+        self.sdPrice = json[PropertyKeys.sdPrice] as? Double
+        self.hdPrice = json[PropertyKeys.hdPrice] as? Double
+    }
+}
 
 extension URL {
     
@@ -15,8 +46,6 @@ extension URL {
     }
 }
 
-let baseURL = URL(string: "https://itunes.apple.com/search?")!
-
 let query: [String: String] = [
     "term": "Inside Out 2015",
     "media": "movie",
@@ -24,18 +53,33 @@ let query: [String: String] = [
     "limit": "10"
 ]
 
-let searchURL = baseURL.withQueries(query)!
-
-URLSession.shared.dataTask(with: searchURL) { (data, response, error) in
-    
-    if let data = data,
-        let string = String(data: data, encoding: .utf8) {
-        
-        print(string)
-        PlaygroundPage.current.finishExecution()
+func fetchItems(matching query: [String: String], completion: @escaping ([StoreItem]?) -> Void) {
+    let baseURL = URL(string: "https://itunes.apple.com/search?")!
+    let searchURL = baseURL.withQueries(query)!
+    let task = URLSession.shared.dataTask(with: searchURL) { (data, response, error) in
+        if  let data = data,
+            let rawJSON = try? JSONSerialization.jsonObject(with: data),
+            let json = rawJSON as? [String: Any],
+            let resultsArray = json["results"] as? [[String: Any]] {
+            
+            let storeItems = resultsArray.flatMap { StoreItem(json: $0) }
+            completion(storeItems)
+            
+            PlaygroundPage.current.finishExecution()
+        } else {
+            print("Either no data was returned, or data was not serialized.")
+            completion(nil)
+            return
+        }
     }
-}.resume()
+    
+    task.resume()
+    
+}
 
+fetchItems(matching: query) { (items) in
+    print(items!.first!)
+}
 /*:
  
  _Copyright © 2017 Apple Inc._
