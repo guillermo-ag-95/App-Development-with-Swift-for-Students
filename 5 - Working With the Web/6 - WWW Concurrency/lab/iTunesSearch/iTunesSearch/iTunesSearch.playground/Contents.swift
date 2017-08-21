@@ -4,6 +4,7 @@ import PlaygroundSupport
 // Part Two: JSON Serialization
 
 PlaygroundPage.current.needsIndefiniteExecution = true
+URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
 
 extension URL {
     
@@ -60,6 +61,7 @@ func fetchItems(matching query: [String: String], completion: @escaping ([StoreI
             
             let storeItems = resultsArray.flatMap { StoreItem(json: $0) }
             completion(storeItems)
+            PlaygroundPage.current.finishExecution()
             
         } else {
             print("Either no data was returned, or data was not serialized.")
@@ -81,5 +83,5 @@ let query: [String: String] = [
 ]
 
 fetchItems(matching: query) { (items) in
-    print(items)
+    print(items!)
 }

@@ -12,6 +12,9 @@
 		6881F3BD1E66032600E14215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6881F3BB1E66032600E14215 /* LaunchScreen.storyboard */; };
 		6881F3C51E66033D00E14215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6881F3C41E66033D00E14215 /* Main.storyboard */; };
 		6881F3CC1E66034A00E14215 /* StoreItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881F3C81E66034A00E14215 /* StoreItemListTableViewController.swift */; };
+		B3B6AA5F1F4B246A00B74669 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6AA5E1F4B246A00B74669 /* StoreItem.swift */; };
+		B3B6AA611F4B24B500B74669 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6AA601F4B24B500B74669 /* URLHelper.swift */; };
+		B3B6AA661F4B252500B74669 /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6AA651F4B252500B74669 /* StoreItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		6881F3C41E66033D00E14215 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6881F3C81E66034A00E14215 /* StoreItemListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItemListTableViewController.swift; sourceTree = "<group>"; };
 		6881F3CE1E66480200E14215 /* iTunesSearch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iTunesSearch.playground; sourceTree = "<group>"; };
+		B3B6AA5E1F4B246A00B74669 /* StoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		B3B6AA601F4B24B500B74669 /* URLHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
+		B3B6AA651F4B252500B74669 /* StoreItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 		6881F3B11E66032600E14215 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				B3B6AA631F4B24E300B74669 /* Model */,
+				B3B6AA621F4B24D600B74669 /* View Controllers */,
+				B3B6AA671F4B252A00B74669 /* Controller */,
+				B3B6AA641F4B24EB00B74669 /* Helpers */,
 				6881F3B21E66032600E14215 /* AppDelegate.swift */,
-				6881F3C81E66034A00E14215 /* StoreItemListTableViewController.swift */,
 				6881F3C41E66033D00E14215 /* Main.storyboard */,
 				6881F3B91E66032600E14215 /* Assets.xcassets */,
 				6881F3BB1E66032600E14215 /* LaunchScreen.storyboard */,
@@ -64,6 +73,38 @@
 				6881F3BE1E66032600E14215 /* Info.plist */,
 			);
 			path = iTunesSearch;
+			sourceTree = "<group>";
+		};
+		B3B6AA621F4B24D600B74669 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6881F3C81E66034A00E14215 /* StoreItemListTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B3B6AA631F4B24E300B74669 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3B6AA5E1F4B246A00B74669 /* StoreItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B3B6AA641F4B24EB00B74669 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B3B6AA601F4B24B500B74669 /* URLHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B3B6AA671F4B252A00B74669 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3B6AA651F4B252500B74669 /* StoreItemController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B6AA5F1F4B246A00B74669 /* StoreItem.swift in Sources */,
+				B3B6AA611F4B24B500B74669 /* URLHelper.swift in Sources */,
 				6881F3CC1E66034A00E14215 /* StoreItemListTableViewController.swift in Sources */,
 				6881F3B31E66032600E14215 /* AppDelegate.swift in Sources */,
+				B3B6AA661F4B252500B74669 /* StoreItemController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
