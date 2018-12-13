@@ -1,7 +1,11 @@
 import UIKit
-import Foundation
 
 class AthleteTableViewController: UITableViewController {
+    
+    struct PropertyKeys {
+        static let athleteCell = "AthleteCell"
+        static let editAthleteSegue = "EditAthlete"
+    }
     
     var athletes: [Athlete] = []
     
@@ -11,6 +15,7 @@ class AthleteTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -18,7 +23,7 @@ class AthleteTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AthleteCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.athleteCell, for: indexPath)
         
         let athlete = athletes[indexPath.row]
         cell.textLabel?.text = athlete.name
@@ -27,24 +32,13 @@ class AthleteTableViewController: UITableViewController {
         return cell
     }
 
+
+    /*
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let athleteFormViewController = segue.destination as! AthleteFormViewController
-        if let indexPath = tableView.indexPathForSelectedRow,
-            segue.identifier == "EditAthlete" {
-            athleteFormViewController.athlete = athletes[indexPath.row]
-        }
+
     }
-    
-    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        let athleteFormViewController = segue.source as! AthleteFormViewController
-        guard let athlete = athleteFormViewController.athlete else { return }
-        if let indexPath = tableView.indexPathForSelectedRow {
-            athletes.remove(at: indexPath.row)
-            // athletes.insert(athlete, at: indexPath.row)
-            tableView.deselectRow(at: indexPath, animated: true)
-        } else {
-            athletes.append(athlete)
-        }
-    }
-    
+ */
+
 }

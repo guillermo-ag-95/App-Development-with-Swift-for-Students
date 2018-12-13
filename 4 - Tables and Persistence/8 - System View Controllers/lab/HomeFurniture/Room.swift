@@ -2,8 +2,8 @@
 import Foundation
 
 class Room {
-    var name: String
-    var furniture: [Furniture]
+    let name: String
+    let furniture: [Furniture]
     
     init(name: String, furniture: [Furniture]) {
         self.name = name

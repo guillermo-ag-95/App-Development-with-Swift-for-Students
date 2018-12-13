@@ -12,9 +12,8 @@
 		2C5E3E211E514CC400C02C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E3E201E514CC400C02C5F /* Assets.xcassets */; };
 		2C5E3E241E514CC400C02C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E3E221E514CC400C02C5F /* LaunchScreen.storyboard */; };
 		2C5E3E2C1E514CE500C02C5F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E2B1E514CE500C02C5F /* Book.swift */; };
+		2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */; };
 		2C5E3E341E514EA700C02C5F /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */; };
-		B36B401A1F3F184B0027B217 /* BookFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B40191F3F184B0027B217 /* BookFormTableViewController.swift */; };
-		B36B401C1F3F23F40027B217 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B401B1F3F23F40027B217 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +24,8 @@
 		2C5E3E231E514CC400C02C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C5E3E251E514CC400C02C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C5E3E2B1E514CE500C02C5F /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFormViewController.swift; sourceTree = "<group>"; };
 		2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
-		B36B40191F3F184B0027B217 /* BookFormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFormTableViewController.swift; sourceTree = "<group>"; };
-		B36B401B1F3F23F40027B217 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */,
-				B36B401B1F3F23F40027B217 /* BookTableViewCell.swift */,
-				B36B40191F3F184B0027B217 /* BookFormTableViewController.swift */,
+				2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */,
 				2C5E3E191E514CC400C02C5F /* AppDelegate.swift */,
 				2C5E3E2B1E514CE500C02C5F /* Book.swift */,
 				2C5E3E1D1E514CC400C02C5F /* Main.storyboard */,
@@ -100,11 +97,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					2C5E3E151E514CC400C02C5F = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -147,8 +145,7 @@
 			files = (
 				2C5E3E341E514EA700C02C5F /* BookTableViewController.swift in Sources */,
 				2C5E3E1A1E514CC400C02C5F /* AppDelegate.swift in Sources */,
-				B36B401A1F3F184B0027B217 /* BookFormTableViewController.swift in Sources */,
-				B36B401C1F3F23F40027B217 /* BookTableViewCell.swift in Sources */,
+				2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */,
 				2C5E3E2C1E514CE500C02C5F /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,7 +181,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -192,7 +191,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -215,12 +218,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -234,7 +238,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -242,7 +248,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -259,10 +269,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -273,10 +284,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FavoriteBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -285,10 +298,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FavoriteBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

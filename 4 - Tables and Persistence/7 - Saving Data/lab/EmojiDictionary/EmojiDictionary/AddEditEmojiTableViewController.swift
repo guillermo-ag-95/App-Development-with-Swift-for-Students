@@ -16,7 +16,7 @@ class AddEditEmojiTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if let emoji = emoji {
-            symbolTextField.text = emoji.symbol
+            symbolTextField.text = String(emoji.symbol)
             nameTextField.text = emoji.name
             descriptionTextField.text = emoji.detailDescription
             usageTextField.text = emoji.usage
@@ -30,7 +30,7 @@ class AddEditEmojiTableViewController: UITableViewController {
         
         guard segue.identifier == "saveUnwind" else { return }
         
-        let symbol = symbolTextField.text ?? " "
+        let symbol = symbolTextField.text ?? ""
         let name = nameTextField.text ?? ""
         let detailDescription = descriptionTextField.text ?? ""
         let usage = usageTextField.text ?? ""

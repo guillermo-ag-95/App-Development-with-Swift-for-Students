@@ -14,8 +14,6 @@
 		A93AF3CB1E4FB5240099CF76 /* EmployeeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93AF3CA1E4FB5240099CF76 /* EmployeeListTableViewController.swift */; };
 		A93AF3CD1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93AF3CC1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift */; };
 		A93AF3CF1E4FB5410099CF76 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93AF3CE1E4FB5410099CF76 /* Employee.swift */; };
-		B350D1B91F446E1500C0E73C /* EmployeeTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350D1B81F446E1500C0E73C /* EmployeeTypeTableViewController.swift */; };
-		B350D1BB1F44708300C0E73C /* EmployeeTypeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350D1BA1F44708300C0E73C /* EmployeeTypeDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +26,6 @@
 		A93AF3CA1E4FB5240099CF76 /* EmployeeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListTableViewController.swift; sourceTree = "<group>"; };
 		A93AF3CC1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableViewController.swift; sourceTree = "<group>"; };
 		A93AF3CE1E4FB5410099CF76 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
-		B350D1B81F446E1500C0E73C /* EmployeeTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTypeTableViewController.swift; sourceTree = "<group>"; };
-		B350D1BA1F44708300C0E73C /* EmployeeTypeDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTypeDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,42 +58,16 @@
 		A93AF3B71E4FB44E0099CF76 /* EmployeeRoster */ = {
 			isa = PBXGroup;
 			children = (
-				B350D1BC1F44709000C0E73C /* Model */,
-				B350D1BD1F44709B00C0E73C /* View Controllers */,
-				B350D1BE1F4470A800C0E73C /* Protocols */,
 				A93AF3B81E4FB44E0099CF76 /* AppDelegate.swift */,
 				A93AF3BC1E4FB44E0099CF76 /* Main.storyboard */,
+				A93AF3CA1E4FB5240099CF76 /* EmployeeListTableViewController.swift */,
+				A93AF3CC1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift */,
+				A93AF3CE1E4FB5410099CF76 /* Employee.swift */,
 				A93AF3BF1E4FB44E0099CF76 /* Assets.xcassets */,
 				A93AF3C11E4FB44E0099CF76 /* LaunchScreen.storyboard */,
 				A93AF3C41E4FB44E0099CF76 /* Info.plist */,
 			);
 			path = EmployeeRoster;
-			sourceTree = "<group>";
-		};
-		B350D1BC1F44709000C0E73C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A93AF3CE1E4FB5410099CF76 /* Employee.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		B350D1BD1F44709B00C0E73C /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A93AF3CA1E4FB5240099CF76 /* EmployeeListTableViewController.swift */,
-				A93AF3CC1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift */,
-				B350D1B81F446E1500C0E73C /* EmployeeTypeTableViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		B350D1BE1F4470A800C0E73C /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				B350D1BA1F44708300C0E73C /* EmployeeTypeDelegate.swift */,
-			);
-			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,10 +97,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					A93AF3B41E4FB44E0099CF76 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -173,9 +144,7 @@
 			files = (
 				A93AF3CD1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift in Sources */,
 				A93AF3B91E4FB44E0099CF76 /* AppDelegate.swift in Sources */,
-				B350D1BB1F44708300C0E73C /* EmployeeTypeDelegate.swift in Sources */,
 				A93AF3CF1E4FB5410099CF76 /* Employee.swift in Sources */,
-				B350D1B91F446E1500C0E73C /* EmployeeTypeTableViewController.swift in Sources */,
 				A93AF3CB1E4FB5240099CF76 /* EmployeeListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +180,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -219,7 +190,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -242,12 +217,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -261,7 +237,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -269,7 +247,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -286,10 +268,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -300,10 +283,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EmployeeRoster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.EmployeeRoster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -312,10 +297,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EmployeeRoster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.EmployeeRoster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

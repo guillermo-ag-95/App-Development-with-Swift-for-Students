@@ -7,10 +7,8 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     
     // add item controller property
-    var storeItemController = StoreItemController()
     
-    // update the items array to the [StoreItem] type
-    var items = [StoreItem]()
+    var items = [String]()
     
     let queryOptions = ["movie", "music", "software", "ebook"]
     
@@ -30,25 +28,8 @@ class StoreItemListTableViewController: UITableViewController {
         if !searchTerm.isEmpty {
             
             // set up query dictionary
-            let query: [String: String] = [
-                "term": searchTerm,
-                "media": mediaType,
-                "lang": "en_us",
-                "limit": "10"
-            ]
-            
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             
             // use the item controller to fetch items
-            storeItemController.fetchItems(matching: query, completion: { (storeItems) in
-                if let storeItems = storeItems {
-                    DispatchQueue.main.async {
-                        self.items = storeItems
-                        self.tableView.reloadData()
-                    }
-                }
-            })
-            
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
         }
@@ -58,29 +39,15 @@ class StoreItemListTableViewController: UITableViewController {
         
         let item = items[indexPath.row]
         
+        cell.textLabel?.text = item
+        
         // set label to the item's name
-        cell.textLabel?.text = item.name
-        
         // set detail label to the item's subtitle
-        cell.detailTextLabel?.text = item.artist
-        
         // reset the image view to the gray image
-        cell.imageView?.image = UIImage(named: "gray")
         
         // initialize a network task to fetch the item's artwork
-        let task = URLSession.shared.dataTask(with: item.artworkURL) { (data, response, error) in
-            if let data = data, let image = UIImage(data: data) {
-                
-                // if successful, use the main queue capture the cell, to initialize a UIImage, and set the cell's image view's image to the
-                DispatchQueue.main.async {
-                    cell.imageView?.image = image
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
-            }
-        }
-        
+        // if successful, use the main queue capture the cell, to initialize a UIImage, and set the cell's image view's image to the 
         // resume the task
-        task.resume()
     }
     
     @IBAction func filterOptionUpdated(_ sender: UISegmentedControl) {

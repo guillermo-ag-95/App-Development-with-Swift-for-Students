@@ -11,16 +11,13 @@ import UIKit
 class HeartRateReceiver {
     var currentHR: Int? {
         didSet {
-            if let currentHR = currentHR, let delegate = delegate {
+            if let currentHR = currentHR {
                 print("The most recent heart rate reading is \(currentHR).")
-                delegate.heartRateUpdate(to: currentHR)
             } else {
                 print("Looks like we can't pick up a heart rate.")
             }
         }
     }
-    
-    var delegate: HeartRateReceiverDelegate?
     
     func startHeartRateMonitoringExample() {
         for _ in 1...10 {
@@ -31,26 +28,14 @@ class HeartRateReceiver {
     }
 }
 
-protocol HeartRateReceiverDelegate {
-    func heartRateUpdate(to bpm: Int)
-}
-
-class HeartRateViewController: UIViewController, HeartRateReceiverDelegate {
+class HeartRateViewController: UIViewController {
     var heartRateLabel: UILabel = UILabel()
-    
-    func heartRateUpdate(to bpm: Int) {
-        heartRateLabel.text = "The user has been shown a heart rate of \(bpm)."
-        print(heartRateLabel.text!)
-    }
 }
 /*:
  First, create an instance of `HeartRateReceiver` and call `startHeartRateMonitoringExample`. Notice that every two seconds `currentHR` get set and prints the new heart rate reading to the console.
  */
-var heartRateReceiver1 = HeartRateReceiver()
-var heartRateViewController1: HeartRateViewController = HeartRateViewController()
 
-heartRateReceiver1.delegate = heartRateViewController1
-heartRateReceiver1.startHeartRateMonitoringExample()
+
 /*:
  In a real app, printing to the console does not show information to the user. You need a way of passing information from the `HeartRateReceiver` to the `HeartRateViewController`. To do this, create a protocol called `HeartRateReceiverDelegate` that requires a method `heartRateUpdated(to bpm:)` where `bpm` is of type `Int` and represents the new rate as _beats per minute_. Since playgrounds read from top to bottom and the two previously declared classes will need to use this protocol, you'll need to declare this protocol above the declaration of `HeartRateReceiver`.
  

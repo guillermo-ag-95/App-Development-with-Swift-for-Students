@@ -10,15 +10,14 @@ print("How to use playgrounds to make writing Swift fun and simple")
 /*:
  Now print your own phrases to the console. Pick one of your favorite songs. Use your knowledge of the `print` function to display the song title and artist.
  */
-print("Lesson 1.1: Exercise 1")
-print("Wake me up when September ends by Green Day")
+
+
 /*:
  Use multiple `print` functions to write out some of the lyrics to the song.
  */
-print("Lesson 1.1: Exercise 2")
-print("Summer has come and passed")
-print("The innocent can never last")
-print("Wake me up when September ends")
+
+
+
 /*:
  
  _Copyright © 2017 Apple Inc._
