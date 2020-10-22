@@ -13,7 +13,7 @@ struct RunningWorkout {
     var elevation: Double
     
     var averageMileTime: Double {
-        return distance / (1_600 * time)
+        return distance * 1600 / time
     }
 }
 
