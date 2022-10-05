@@ -7,7 +7,7 @@ import Foundation
 var roll = 0
 
 while roll != 1 {
+    roll = Int.random(in 1...6)
     print("You've got a \(roll)")
-    roll = Int(arc4random_uniform(6) + 1)
 }
 //: [Previous](@previous)  |  page 3 of 6  |  [Next: App Exercise - While Loops](@next)
