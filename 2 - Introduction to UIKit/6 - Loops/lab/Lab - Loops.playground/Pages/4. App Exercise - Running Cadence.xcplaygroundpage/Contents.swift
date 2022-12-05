@@ -24,5 +24,6 @@ testSteps = 0
 repeat {
     print("Take a step")
     testSteps += 1
+    Thread.sleep(forTimeInterval: 60/cadence)
 } while testSteps < 10
 //: [Previous](@previous)  |  page 4 of 6  |  [Next: Exercise - Control Transfer Statements](@next)
